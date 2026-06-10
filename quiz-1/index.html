@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz SINERG.ia — ¿Desde dónde estás llegando a la IA?</title>
+<!-- BEGIN FAVICON LINK -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<!-- END OF FAVICON LINK -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-stars">✦ ✧ ✦</div>
+  <div class="logo-text">SINERG<em>.ia</em></div>
+  <div style="margin-top: 0.6rem;">
+    <span class="header-ep">Episodio 2 · Quiz interactivo</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- INTRO SCREEN -->
+  <div class="screen active" id="screen-intro">
+    <div class="intro-wrap">
+      <h1 class="intro-title">¿Desde dónde estás<br><em>llegando a la IA?</em></h1>
+      <p class="intro-desc">
+        Antes de usar cualquier herramienta, vale la pena saber qué quieres de ella.<br><br>
+        Este cuestionario te ayuda a descubrir tu <strong>perfil SINERG.ia</strong>: cómo piensas, qué necesitas y cómo puedes empezar a usar la inteligencia artificial de una forma que tenga sentido para ti.<br><br>
+        No hay respuestas correctas ni incorrectas. Solo distintas formas de llegar a la IA.
+      </p>
+
+      <div class="profile-preview">
+        <div class="profile-chip">
+          <div class="chip-icon">🌀</div>
+          <div class="chip-name">Alma creativa</div>
+          <div class="chip-hint">Mil ideas, necesita estructura y forma</div>
+        </div>
+        <div class="profile-chip">
+          <div class="chip-icon">🧭</div>
+          <div class="chip-name">Alma curiosa</div>
+          <div class="chip-hint">Quiere explorar y perderle el miedo</div>
+        </div>
+        <div class="profile-chip">
+          <div class="chip-icon">🔍</div>
+          <div class="chip-name">Mente crítica</div>
+          <div class="chip-hint">Analiza, verifica y no le cree todo</div>
+        </div>
+        <div class="profile-chip">
+          <div class="chip-icon">🛠️</div>
+          <div class="chip-name">Mente práctica</div>
+          <div class="chip-hint">Busca soluciones concretas y eficiencia</div>
+        </div>
+      </div>
+
+      <button class="start-btn" onclick="startQuiz()">
+        Descubrir mi perfil &rarr;
+      </button>
+      <p class="meta-note">9 preguntas · 4–5 minutos</p>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="screen" id="screen-quiz">
+    <div class="quiz-wrap">
+      <div class="progress-area">
+        <div class="progress-meta">
+          <span class="progress-num" id="prog-label">Pregunta 1 de 9</span>
+          <span class="progress-pct" id="prog-pct">0% completado</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="prog-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div class="question-label" id="q-label">Pregunta 1</div>
+      <div class="question-text" id="q-text"></div>
+      <div class="options" id="q-options"></div>
+
+      <div class="nav-row">
+        <button class="nav-back" id="btn-back" onclick="goBack()" disabled>← Anterior</button>
+        <button class="nav-next" id="btn-next" onclick="goNext()" disabled>Siguiente →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div class="screen" id="screen-result">
+    <div class="result-wrap" id="result-content"></div>
+  </div>
+
+</div>
+
+<footer>
+  Un proyecto de <span>SINERG.ia</span> · Episodio 2: <em>¿La IA piensa?</em>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
